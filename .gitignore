@@ -1,0 +1,4 @@
+kb_index.db
+__pycache__/
+.venv/
+.env

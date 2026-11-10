@@ -1,0 +1,97 @@
+article_id,title,product,category,symptoms,error_code,body,updated_at
+1002,"New content not showing, old content still playing",Content Management Console,content,"content not updating, old menu showing, new content missing, schedule not working",,"## Steps
+
+1. Confirm the new playlist is assigned to the correct device or device group.
+2. Check the schedule start and end dates and the site's time zone.
+3. Confirm the player has synced since the change (last sync time in the console).
+4. Trigger a manual sync from the console.
+
+## Escalate if
+
+Player has synced but still plays old content.",2026-10-01
+1003,Screen flickers or shows lines,Commercial Display 55in,hardware,"flickering, lines on screen, flashing, distorted image",,"## Steps
+
+1. Check whether the flicker also appears on the display's own menu. If yes, the display is likely faulty.
+2. If only content flickers, swap the HDMI cable.
+3. Set the player output resolution to match the display's native resolution in the console.
+
+## Escalate if
+
+Flicker appears on the display's own menu, or continues after a cable swap and resolution change.",2026-10-01
+1004,Display shows 'No signal',Commercial Display 55in,hardware,"no signal, no input, blue screen with no signal message",,"## Steps
+
+1. Confirm the HDMI cable is firmly seated at both the player and the display.
+2. Using the display remote, set the input to the port the player is connected to (many units default to HDMI 2).
+3. Check the player is powered: status LED should be lit.
+4. Swap in a known-good HDMI cable if one is on site.
+
+## Escalate if
+
+Still 'No signal' with a known-good cable and the correct input selected.",2026-10-01
+1005,Content appears sideways or upside down,Commercial Display 75in,content,"content sideways, wrong orientation, rotated, upside down",,"## Steps
+
+1. Confirm whether the display is mounted in portrait or landscape.
+2. In the console, set the device orientation to match the mounting.
+3. Re-push the playlist so content re-renders.
+
+## Escalate if
+
+Orientation is correct in the console but content still renders rotated.",2026-10-01
+1006,Video plays but there is no sound,Media Player X1,playback,"no audio, no sound, muted, video without sound",,"## Steps
+
+1. Check the display's volume and mute setting with the remote.
+2. Confirm audio output is enabled for the device in the console.
+3. Confirm the content file itself has an audio track.
+
+## Escalate if
+
+Sound is enabled everywhere and the file has audio, but nothing plays.",2026-10-01
+1007,Black screen after a firmware update,Media Player X1,playback,"black screen, display on but no content, screen went black after update",E-104,"## Steps
+
+1. Check the player's status LED. Blinking amber means the update is still installing: wait 15 minutes (updates on X1 firmware 4.2+ take longer).
+2. If the LED is solid green, reboot the player from the management console. Content should appear within 3 minutes.
+3. Confirm a playlist is assigned to the device in the console.
+4. Re-push the current playlist.
+
+## Escalate if
+
+Still black after re-pushing the playlist, or the player shows offline for more than 30 minutes.",2026-11-02
+1008,Player goes offline on a Wi-Fi site,Media Player X1,connectivity,"player offline, drops off network, disconnected, intermittent connection",E-210,"## Steps
+
+1. Check in the console when the player was last seen online.
+2. Ask the site whether the Wi-Fi network name or password changed recently.
+3. Reboot the player from the console or have site staff power-cycle it.
+4. If the network changed, update the Wi-Fi profile on the player from the console.
+
+## Escalate if
+
+Offline more than 2 hours after a power-cycle, or the site network is unchanged and the player still drops repeatedly.",2026-10-01
+1009,Player reboots on its own or feels hot,Media Player X2 Pro,hardware,"random reboots, overheating, player hot, restarts by itself",E-310,"## Steps
+
+1. Check the console event log for repeated restart events.
+2. Ask the site whether the player is enclosed or mounted behind the display without airflow.
+3. Ask site staff to clear vents and allow at least 5 cm of clearance.
+4. Check the player's reported temperature in the console if available.
+
+## Escalate if
+
+Restarts continue after airflow is fixed, or reported temperature stays above the safe limit.",2026-10-01
+1010,"Player storage full, new content fails to download",Media Player X2 Pro,content,"storage full, download failed, not enough space, content failed to load",E-507,"## Steps
+
+1. Check the player's free storage in the console.
+2. Remove playlists no longer scheduled on that device.
+3. Trigger a manual sync to download the new content.
+
+## Escalate if
+
+Storage still shows full after removing unused playlists.",2026-10-01
+1011,Touchscreen not responding to taps,Interactive Kiosk K1,hardware,"touch not working, screen not responding, taps ignored, touchscreen frozen",E-620,"## Steps
+
+1. Ask site staff to wipe the screen; moisture or grease blocks touch input.
+2. Reboot the kiosk from the management console.
+3. In the console, confirm the touch driver shows as connected.
+4. Run the touch calibration from the kiosk's maintenance menu.
+
+## Escalate if
+
+Touch is still unresponsive after calibration, or the driver shows as disconnected.",2026-11-05
