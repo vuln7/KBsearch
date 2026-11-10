@@ -205,9 +205,7 @@ def search(conn: sqlite3.Connection, query: str, k: int = 3) -> list[Hit]:
     qvec = embed(query)
     codes = {re.sub(r"^[Ee]-?", "E-", c) for c in ERROR_CODE_RE.findall(query)}
 
-    # Brute-force scan in pure Python, measured at ~50 ms a query for 300 articles
-    # and ~0.7 s for 3,000. The next step at scale is one numpy matrix product
-    # over all vectors, or a vector index; plain Python keeps the demo dependency-free.
+    # brute force; fine for a few hundred articles (see README for timings)
     best: dict[int, tuple[float, str]] = {}
     for aid, section, blob in conn.execute(
             "SELECT article_id, section, vector FROM chunks"):
@@ -217,7 +215,7 @@ def search(conn: sqlite3.Connection, query: str, k: int = 3) -> list[Hit]:
         if aid not in best or score > best[aid][0]:
             best[aid] = (score, section)
 
-    if codes:  # an exact error code is where similarity search is weakest
+    if codes:  # exact error-code match beats similarity
         marks = ",".join("?" * len(codes))
         for (aid,) in conn.execute(
                 f"SELECT article_id FROM articles WHERE error_code IN ({marks})",
