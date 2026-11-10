@@ -10,7 +10,7 @@
 |---|---|
 | **Problem** | Support agents searched a large knowledge base by hand while customers waited. |
 | **What I built** | A pipeline that keeps a vector index of the knowledge base in sync with HubSpot, plus a Claude skill that searches it and answers with the matching article's steps. |
-| **Result** | Used daily by 12 full-time support agents. It became the team's search engine for the knowledge base. |
+| **Result** | Used daily by 12 full-time support agents. Finding an article by hand took about 20 seconds; with `/kb`, the answer arrives in about 3. |
 | **Stack** | Python, vector search, HubSpot (CSV export, then API), cron, Claude Agent Skills |
 | **My role** | Designed and built it end to end, including the sync pipeline and skill release process |
 
